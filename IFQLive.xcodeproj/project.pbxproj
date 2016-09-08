@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC769AD1D81493A00AE820E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769AC1D81493A00AE820E /* main.m */; };
+		3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769AF1D81493A00AE820E /* AppDelegate.m */; };
+		3FC769B31D81493A00AE820E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769B21D81493A00AE820E /* ViewController.m */; };
+		3FC769B61D81493A00AE820E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC769B41D81493A00AE820E /* Main.storyboard */; };
+		3FC769B81D81493A00AE820E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC769B71D81493A00AE820E /* Assets.xcassets */; };
+		3FC769BB1D81493A00AE820E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC769B91D81493A00AE820E /* LaunchScreen.storyboard */; };
+		3FC769C81D81509C00AE820E /* IFQNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769C71D81509C00AE820E /* IFQNetworkManager.m */; };
+		3FC769CF1D81549B00AE820E /* IFQLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769CE1D81549B00AE820E /* IFQLobbyViewController.m */; };
+		3FC769D51D815E6200AE820E /* IFQIngKeeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769D41D815E6200AE820E /* IFQIngKeeListModel.m */; };
+		3FC769D91D8162DB00AE820E /* IFQLobbyItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769D71D8162DB00AE820E /* IFQLobbyItemCell.m */; };
+		3FC769DA1D8162DB00AE820E /* IFQLobbyItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC769D81D8162DB00AE820E /* IFQLobbyItemCell.xib */; };
+		3FC769DD1D81654B00AE820E /* UIView+IFQInspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769DC1D81654B00AE820E /* UIView+IFQInspectable.m */; };
+		3FC769E01D816B2900AE820E /* UIImageView+IFQWebURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769DF1D816B2900AE820E /* UIImageView+IFQWebURL.m */; };
+		3FC769E31D816D1800AE820E /* UIImageView+IFQIngKeeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769E21D816D1800AE820E /* UIImageView+IFQIngKeeURL.m */; };
+		3FC769F11D81764F00AE820E /* IFQMediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769F01D81764F00AE820E /* IFQMediaPlayerViewController.m */; };
+		3FC769F31D817C3A00AE820E /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769E51D81747900AE820E /* IJKMediaFramework.framework */; };
+		3FC769F51D817CBB00AE820E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F41D817CBB00AE820E /* libz.tbd */; };
+		3FC769F71D817CD300AE820E /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F61D817CD300AE820E /* libbz2.tbd */; };
+		3FC769F91D817CE000AE820E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F81D817CE000AE820E /* libiconv.tbd */; };
+		E493E01CB6096B977B57C786 /* Pods_IFQLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44718AFBBC53B6E0B56C0B3A /* Pods_IFQLive.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FC769A81D81493A00AE820E /* IFQLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFQLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC769AC1D81493A00AE820E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FC769AE1D81493A00AE820E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FC769AF1D81493A00AE820E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3FC769B11D81493A00AE820E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3FC769B21D81493A00AE820E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3FC769B51D81493A00AE820E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FC769B71D81493A00AE820E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FC769BA1D81493A00AE820E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FC769BC1D81493A00AE820E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC769C61D81509C00AE820E /* IFQNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQNetworkManager.h; sourceTree = "<group>"; };
+		3FC769C71D81509C00AE820E /* IFQNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQNetworkManager.m; sourceTree = "<group>"; };
+		3FC769CD1D81549B00AE820E /* IFQLobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQLobbyViewController.h; sourceTree = "<group>"; };
+		3FC769CE1D81549B00AE820E /* IFQLobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQLobbyViewController.m; sourceTree = "<group>"; };
+		3FC769D31D815E6200AE820E /* IFQIngKeeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQIngKeeListModel.h; sourceTree = "<group>"; };
+		3FC769D41D815E6200AE820E /* IFQIngKeeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQIngKeeListModel.m; sourceTree = "<group>"; };
+		3FC769D61D8162DB00AE820E /* IFQLobbyItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQLobbyItemCell.h; sourceTree = "<group>"; };
+		3FC769D71D8162DB00AE820E /* IFQLobbyItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQLobbyItemCell.m; sourceTree = "<group>"; };
+		3FC769D81D8162DB00AE820E /* IFQLobbyItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFQLobbyItemCell.xib; sourceTree = "<group>"; };
+		3FC769DB1D81654B00AE820E /* UIView+IFQInspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IFQInspectable.h"; sourceTree = "<group>"; };
+		3FC769DC1D81654B00AE820E /* UIView+IFQInspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IFQInspectable.m"; sourceTree = "<group>"; };
+		3FC769DE1D816B2900AE820E /* UIImageView+IFQWebURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+IFQWebURL.h"; sourceTree = "<group>"; };
+		3FC769DF1D816B2900AE820E /* UIImageView+IFQWebURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+IFQWebURL.m"; sourceTree = "<group>"; };
+		3FC769E11D816D1800AE820E /* UIImageView+IFQIngKeeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+IFQIngKeeURL.h"; sourceTree = "<group>"; };
+		3FC769E21D816D1800AE820E /* UIImageView+IFQIngKeeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+IFQIngKeeURL.m"; sourceTree = "<group>"; };
+		3FC769E51D81747900AE820E /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		3FC769EF1D81764F00AE820E /* IFQMediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQMediaPlayerViewController.h; sourceTree = "<group>"; };
+		3FC769F01D81764F00AE820E /* IFQMediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQMediaPlayerViewController.m; sourceTree = "<group>"; };
+		3FC769F41D817CBB00AE820E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3FC769F61D817CD300AE820E /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		3FC769F81D817CE000AE820E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		41850582882DA3E8DC2C74ED /* Pods-IFQLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFQLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive.debug.xcconfig"; sourceTree = "<group>"; };
+		44718AFBBC53B6E0B56C0B3A /* Pods_IFQLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IFQLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5242C747050CBA9D3773C1D /* Pods-IFQLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFQLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC769A51D81493A00AE820E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC769F91D817CE000AE820E /* libiconv.tbd in Frameworks */,
+				3FC769F71D817CD300AE820E /* libbz2.tbd in Frameworks */,
+				3FC769F51D817CBB00AE820E /* libz.tbd in Frameworks */,
+				E493E01CB6096B977B57C786 /* Pods_IFQLive.framework in Frameworks */,
+				3FC769F31D817C3A00AE820E /* IJKMediaFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC7699F1D81493A00AE820E = {
+			isa = PBXGroup;
+			children = (
+				3FC769E41D81741900AE820E /* IFQFrameworks */,
+				3FC769AA1D81493A00AE820E /* IFQLive */,
+				3FC769A91D81493A00AE820E /* Products */,
+				BBED38F54383299E2002C42A /* Pods */,
+				5B69BD713F7817153AC8976A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC769A91D81493A00AE820E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769A81D81493A00AE820E /* IFQLive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC769AA1D81493A00AE820E /* IFQLive */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769C31D814F3C00AE820E /* Expand */,
+				3FC769C21D814F2D00AE820E /* Business */,
+				3FC769AE1D81493A00AE820E /* AppDelegate.h */,
+				3FC769AF1D81493A00AE820E /* AppDelegate.m */,
+				3FC769B11D81493A00AE820E /* ViewController.h */,
+				3FC769B21D81493A00AE820E /* ViewController.m */,
+				3FC769B41D81493A00AE820E /* Main.storyboard */,
+				3FC769B71D81493A00AE820E /* Assets.xcassets */,
+				3FC769B91D81493A00AE820E /* LaunchScreen.storyboard */,
+				3FC769BC1D81493A00AE820E /* Info.plist */,
+				3FC769AB1D81493A00AE820E /* Supporting Files */,
+			);
+			path = IFQLive;
+			sourceTree = "<group>";
+		};
+		3FC769AB1D81493A00AE820E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769AC1D81493A00AE820E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FC769C21D814F2D00AE820E /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769ED1D81764F00AE820E /* Player */,
+				3FC769C91D81539A00AE820E /* Lobby */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		3FC769C31D814F3C00AE820E /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769F21D817A8B00AE820E /* Router */,
+				3FC769C51D81500500AE820E /* Network */,
+				3FC769C41D814FE700AE820E /* Category */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		3FC769C41D814FE700AE820E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769DB1D81654B00AE820E /* UIView+IFQInspectable.h */,
+				3FC769DC1D81654B00AE820E /* UIView+IFQInspectable.m */,
+				3FC769DE1D816B2900AE820E /* UIImageView+IFQWebURL.h */,
+				3FC769DF1D816B2900AE820E /* UIImageView+IFQWebURL.m */,
+				3FC769E11D816D1800AE820E /* UIImageView+IFQIngKeeURL.h */,
+				3FC769E21D816D1800AE820E /* UIImageView+IFQIngKeeURL.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3FC769C51D81500500AE820E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769C61D81509C00AE820E /* IFQNetworkManager.h */,
+				3FC769C71D81509C00AE820E /* IFQNetworkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3FC769C91D81539A00AE820E /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769CC1D81540600AE820E /* Model */,
+				3FC769CB1D8153FE00AE820E /* Controller */,
+				3FC769CA1D8153F500AE820E /* View */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		3FC769CA1D8153F500AE820E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769D61D8162DB00AE820E /* IFQLobbyItemCell.h */,
+				3FC769D71D8162DB00AE820E /* IFQLobbyItemCell.m */,
+				3FC769D81D8162DB00AE820E /* IFQLobbyItemCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FC769CB1D8153FE00AE820E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769CD1D81549B00AE820E /* IFQLobbyViewController.h */,
+				3FC769CE1D81549B00AE820E /* IFQLobbyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FC769CC1D81540600AE820E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769D31D815E6200AE820E /* IFQIngKeeListModel.h */,
+				3FC769D41D815E6200AE820E /* IFQIngKeeListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FC769E41D81741900AE820E /* IFQFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769E51D81747900AE820E /* IJKMediaFramework.framework */,
+			);
+			path = IFQFrameworks;
+			sourceTree = "<group>";
+		};
+		3FC769ED1D81764F00AE820E /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769EE1D81764F00AE820E /* Controller */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		3FC769EE1D81764F00AE820E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769EF1D81764F00AE820E /* IFQMediaPlayerViewController.h */,
+				3FC769F01D81764F00AE820E /* IFQMediaPlayerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FC769F21D817A8B00AE820E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5B69BD713F7817153AC8976A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FC769F81D817CE000AE820E /* libiconv.tbd */,
+				3FC769F61D817CD300AE820E /* libbz2.tbd */,
+				3FC769F41D817CBB00AE820E /* libz.tbd */,
+				44718AFBBC53B6E0B56C0B3A /* Pods_IFQLive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBED38F54383299E2002C42A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41850582882DA3E8DC2C74ED /* Pods-IFQLive.debug.xcconfig */,
+				D5242C747050CBA9D3773C1D /* Pods-IFQLive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC769A71D81493A00AE820E /* IFQLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC769BF1D81493A00AE820E /* Build configuration list for PBXNativeTarget "IFQLive" */;
+			buildPhases = (
+				D153E48459D802F0B2172548 /* [CP] Check Pods Manifest.lock */,
+				3FC769A41D81493A00AE820E /* Sources */,
+				3FC769A51D81493A00AE820E /* Frameworks */,
+				3FC769A61D81493A00AE820E /* Resources */,
+				D4C67A52D66B608CC33AE52E /* [CP] Embed Pods Frameworks */,
+				E7894D05DE4EFE1454587091 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IFQLive;
+			productName = IFQLive;
+			productReference = 3FC769A81D81493A00AE820E /* IFQLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC769A01D81493A00AE820E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = qiuyin;
+				TargetAttributes = {
+					3FC769A71D81493A00AE820E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3FC769A31D81493A00AE820E /* Build configuration list for PBXProject "IFQLive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FC7699F1D81493A00AE820E;
+			productRefGroup = 3FC769A91D81493A00AE820E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC769A71D81493A00AE820E /* IFQLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC769A61D81493A00AE820E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC769DA1D8162DB00AE820E /* IFQLobbyItemCell.xib in Resources */,
+				3FC769BB1D81493A00AE820E /* LaunchScreen.storyboard in Resources */,
+				3FC769B81D81493A00AE820E /* Assets.xcassets in Resources */,
+				3FC769B61D81493A00AE820E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D153E48459D802F0B2172548 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C67A52D66B608CC33AE52E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7894D05DE4EFE1454587091 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC769A41D81493A00AE820E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC769E31D816D1800AE820E /* UIImageView+IFQIngKeeURL.m in Sources */,
+				3FC769F11D81764F00AE820E /* IFQMediaPlayerViewController.m in Sources */,
+				3FC769DD1D81654B00AE820E /* UIView+IFQInspectable.m in Sources */,
+				3FC769B31D81493A00AE820E /* ViewController.m in Sources */,
+				3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */,
+				3FC769AD1D81493A00AE820E /* main.m in Sources */,
+				3FC769C81D81509C00AE820E /* IFQNetworkManager.m in Sources */,
+				3FC769CF1D81549B00AE820E /* IFQLobbyViewController.m in Sources */,
+				3FC769D51D815E6200AE820E /* IFQIngKeeListModel.m in Sources */,
+				3FC769E01D816B2900AE820E /* UIImageView+IFQWebURL.m in Sources */,
+				3FC769D91D8162DB00AE820E /* IFQLobbyItemCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FC769B41D81493A00AE820E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC769B51D81493A00AE820E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FC769B91D81493A00AE820E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC769BA1D81493A00AE820E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FC769BD1D81493A00AE820E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3FC769BE1D81493A00AE820E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FC769C01D81493A00AE820E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41850582882DA3E8DC2C74ED /* Pods-IFQLive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IFQFrameworks",
+				);
+				INFOPLIST_FILE = IFQLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = infiQ.IFQLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FC769C11D81493A00AE820E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5242C747050CBA9D3773C1D /* Pods-IFQLive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IFQFrameworks",
+				);
+				INFOPLIST_FILE = IFQLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = infiQ.IFQLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC769A31D81493A00AE820E /* Build configuration list for PBXProject "IFQLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC769BD1D81493A00AE820E /* Debug */,
+				3FC769BE1D81493A00AE820E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC769BF1D81493A00AE820E /* Build configuration list for PBXNativeTarget "IFQLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC769C01D81493A00AE820E /* Debug */,
+				3FC769C11D81493A00AE820E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FC769A01D81493A00AE820E /* Project object */;
+}

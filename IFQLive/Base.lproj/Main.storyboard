@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="if7-sQ-Fzj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gcj-ej-icx">
+            <objects>
+                <navigationController id="if7-sQ-Fzj" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1h-21-vIn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zcF-ao-Mp8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxZ-fC-y5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="203"/>
+        </scene>
+        <!--直播大厅-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="直播大厅" id="BYZ-38-t0r" customClass="IFQLobbyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-st-RxZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0U-st-RxZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ry-XF-Umk"/>
+                            <constraint firstItem="Q0U-st-RxZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MpW-OW-Vw5"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0U-st-RxZ" secondAttribute="trailing" id="PKh-C9-8tY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q0U-st-RxZ" secondAttribute="bottom" id="ub9-qs-Z53"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="大厅" id="0dm-r4-LQd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="camera" id="Ro7-jc-bpL">
+                            <connections>
+                                <action selector="showLive:" destination="BYZ-38-t0r" id="bC4-YM-XHL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Q0U-st-RxZ" id="Bif-NE-HGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="203"/>
+        </scene>
+    </scenes>
+</document>
