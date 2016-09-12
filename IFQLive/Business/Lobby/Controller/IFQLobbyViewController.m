@@ -13,18 +13,22 @@
 #import "UIImageView+IFQIngKeeURL.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "IFQMediaPlayerViewController.h"
+#import "UIScrollView+IFQRefresh.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "IFQLiveViewController.h"
 
-#define Ratio 618/480
-
+#define Ratio 420/320
 #define INGKEE_LIST_URL ([NSString stringWithFormat:@"http://service.ingkee.com/api/live/gettop?imsi=&uid=17800399&proto=5&idfa=A1205EB8-0C9A-4131-A2A2-27B9A1E06622&lc=0000000000000026&cc=TG0001&imei=&sid=20i0a3GAvc8ykfClKMAen8WNeIBKrUwgdG9whVJ0ljXi1Af8hQci3&cv=IK3.1.00_Iphone&devi=bcb94097c7a3f3314be284c8a5be2aaeae66d6ab&conn=Wifi&ua=iPhone&idfv=DEBAD23B-7C6A-4251-B8AF-A95910B778B7&osversion=ios_9.300000&count=5&multiaddr=1"])
 
 static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 
-@interface IFQLobbyViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface IFQLobbyViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, copy) NSMutableArray<IFQLivesModel*> *dataArr;
+@property (nonatomic, copy)   NSMutableArray<IFQLivesModel*> *dataArr;
 @property (nonatomic, strong) NSURLSessionDataTask *ingKeeDataTast;
+
+@property (nonatomic, copy) NSString *textValue;
 
 @end
 
@@ -32,15 +36,24 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    self.navigationController.navigationBar.translucent = NO;
+    self.edgesForExtendedLayout               = UIRectEdgeNone;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.extendedLayoutIncludesOpaqueBars     = YES;
     { // tableView
+//        self.tableView.
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * Ratio + 1;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
         UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([IFQLobbyItemCell class]) bundle:nil];
         [self.tableView registerNib:cellNib forCellReuseIdentifier:kItemCellIdentify];
+//        SDRefreshHeaderView *refreshView = [SDRefreshHeaderView refreshView];
+//        [refreshView addToScrollView:self.tableView];
+        __weak typeof(self) wSelf = self;
+        [self.tableView addPullToRefreshView:^{
+            [wSelf requestListData];
+        }];
     }
     
     { // init data
@@ -79,17 +92,29 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
     [self pushToPlayWithStreamURL:liveModel.stream_addr preImgURL:creator.portrait];
 }
 
+#pragma mark - UIScrollView Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    
+}
+
 #pragma mark Network
 #pragma mark -- Request
 - (void)requestListData {
     __weak typeof(self) wSelf = self;
     [self.ingKeeDataTast cancel];
-    [SVProgressHUD show];
+//    [SVProgressHUD show];
     self.ingKeeDataTast = [[IFQNetworkManager manager] requestWithURL:INGKEE_LIST_URL
                                                                 paras:nil
                                                               success:^(NSURLSessionDataTask *task, NSObject *parserObject) {
         __strong typeof(wSelf) sSelf= wSelf;
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
+        
         BOOL isSucc = YES;
         if ([parserObject isKindOfClass:[NSDictionary class]]) {
             IFQIngKeeListModel *listModel = [IFQIngKeeListModel yy_modelWithDictionary:(NSDictionary*)parserObject];
@@ -102,18 +127,23 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
         if (!isSucc) {
             //TODO:加载出错
         }
+        [wSelf.tableView endPullAnimator];
     } failure:^(NSURLSessionDataTask *task, NSObject *cacheParserObject, NSError *requestErr) {
-        __strong typeof(wSelf) sSelf= wSelf;
-        [SVProgressHUD dismiss];
+//        __strong typeof(wSelf) sSelf= wSelf;
+//        [SVProgressHUD dismiss];
+        [wSelf.tableView endPullAnimator];
         //TODO:加载出错
     }];
 }
+
+
 
 /**
  *  跳转到直播页面
  */
 - (IBAction)showLive:(id)sender {
-    
+    IFQLiveViewController *liveVC = [[IFQLiveViewController alloc] init];
+    [self presentViewController:liveVC animated:YES completion:NULL];
 }
 
 /**
@@ -139,6 +169,9 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
     return _dataArr;
 }
 
+- (void)refreshTriggered:(id)sender {
+    [self requestListData];
+}
 
 -(void)dealloc {
     [self.ingKeeDataTast cancel];

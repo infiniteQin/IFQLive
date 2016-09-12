@@ -506,3 +506,15 @@ Pods/Target Support Files/SVProgressHUD/SVProgressHUD.xcconfig
 Pods/Target Support Files/YYModel/Info.plist
 Pods/Target Support Files/YYModel/YYModel-umbrella.h
 Pods/Target Support Files/YYModel/YYModel.modulemap
+Pods/CBStoreHouseRefreshControl/LICENSE
+Pods/CBStoreHouseRefreshControl/README.md
+Pods/CBStoreHouseRefreshControl/Class/BarItem.h
+Pods/CBStoreHouseRefreshControl/Class/BarItem.m
+Pods/CBStoreHouseRefreshControl/Class/CBStoreHouseRefreshControl.h
+Pods/CBStoreHouseRefreshControl/Class/CBStoreHouseRefreshControl.m
+Pods/Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-dummy.m
+Pods/Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-prefix.pch
+Pods/Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-umbrella.h
+Pods/Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.modulemap
+Pods/Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.xcconfig
+Pods/Target Support Files/CBStoreHouseRefreshControl/Info.plist

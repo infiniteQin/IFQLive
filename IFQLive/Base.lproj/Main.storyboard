@@ -9,6 +9,7 @@
         <scene sceneID="gcj-ej-icx">
             <objects>
                 <navigationController id="if7-sQ-Fzj" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1h-21-vIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -20,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxZ-fC-y5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978" y="203"/>
+            <point key="canvasLocation" x="-1063" y="203"/>
         </scene>
         <!--直播大厅-->
         <scene sceneID="tne-QT-ifu">
@@ -47,6 +48,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q0U-st-RxZ" secondAttribute="bottom" id="ub9-qs-Z53"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="大厅" id="0dm-r4-LQd">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="camera" id="Ro7-jc-bpL">
                             <connections>
@@ -61,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645" y="203"/>
+            <point key="canvasLocation" x="-604" y="203"/>
         </scene>
     </scenes>
 </document>

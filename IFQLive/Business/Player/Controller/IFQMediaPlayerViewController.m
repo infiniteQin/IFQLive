@@ -11,6 +11,9 @@
 #import <Masonry/Masonry.h>
 #import "UIView+IFQInspectable.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "IFQRTMPConfig.h"
+//自己测试RTMP播放地址
+
 
 @interface IFQMediaPlayerViewController ()
 
@@ -22,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (kCustPlayRTMPURL.length>0) {
+        self.mediaURL = kCustPlayRTMPURL;
+    }
     self.view.backgroundColor = [UIColor whiteColor];
     { // back btn
         [self setupBackBtn];
