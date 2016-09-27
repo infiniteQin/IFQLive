@@ -129,8 +129,6 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
         }
         [wSelf.tableView endPullAnimator];
     } failure:^(NSURLSessionDataTask *task, NSObject *cacheParserObject, NSError *requestErr) {
-//        __strong typeof(wSelf) sSelf= wSelf;
-//        [SVProgressHUD dismiss];
         [wSelf.tableView endPullAnimator];
         //TODO:加载出错
     }];

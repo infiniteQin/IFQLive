@@ -11,6 +11,7 @@ def pods
     pod 'SVProgressHUD', '~> 2.0.3'
     pod 'SDWebImage', '~> 3.8.1'
     pod 'Masonry', '~> 1.0.1'
+    pod 'KMNavigationBarTransition', '~> 0.0.10'
 end
 
 target 'IFQLive' do
