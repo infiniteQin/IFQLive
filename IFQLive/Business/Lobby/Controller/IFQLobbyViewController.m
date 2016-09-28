@@ -7,7 +7,6 @@
 //
 
 #import "IFQLobbyViewController.h"
-#import "IFQNetworkManager.h"
 #import "IFQIngKeeListModel.h"
 #import "IFQLobbyItemCell.h"
 #import "UIImageView+IFQIngKeeURL.h"
@@ -24,11 +23,10 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 
 @interface IFQLobbyViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, copy)   NSMutableArray<IFQLivesModel*> *dataArr;
-@property (nonatomic, strong) NSURLSessionDataTask *ingKeeDataTast;
-
-@property (nonatomic, copy) NSString *textValue;
+@property (weak, nonatomic)   IBOutlet UITableView            *tableView;
+@property (nonatomic, copy)   NSMutableArray<IFQLivesModel*>  *dataArr;
+@property (nonatomic, strong) IFQRequest                      *ingKeeListRequest;
+@property (nonatomic, copy)   NSString                        *textValue;
 
 @end
 
@@ -38,18 +36,14 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
     [super viewDidLoad];
 //    self.navigationController.navigationBar.translucent = NO;
     self.edgesForExtendedLayout               = UIRectEdgeNone;
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//    self.extendedLayoutIncludesOpaqueBars     = YES;
+
     { // tableView
-//        self.tableView.
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * Ratio + 1;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([IFQLobbyItemCell class]) bundle:nil];
         [self.tableView registerNib:cellNib forCellReuseIdentifier:kItemCellIdentify];
-//        SDRefreshHeaderView *refreshView = [SDRefreshHeaderView refreshView];
-//        [refreshView addToScrollView:self.tableView];
         __weak typeof(self) wSelf = self;
         [self.tableView addPullToRefreshView:^{
             [wSelf requestListData];
@@ -107,30 +101,17 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 #pragma mark -- Request
 - (void)requestListData {
     __weak typeof(self) wSelf = self;
-    [self.ingKeeDataTast cancel];
-//    [SVProgressHUD show];
-    self.ingKeeDataTast = [[IFQNetworkManager manager] requestWithURL:INGKEE_LIST_URL
-                                                                paras:nil
-                                                              success:^(NSURLSessionDataTask *task, NSObject *parserObject) {
+    [self.ingKeeListRequest cancel];
+    [IFQIngKeeListModel requestWithURL:INGKEE_LIST_URL params:nil succ:^(IFQIngKeeListModel *model) {
         __strong typeof(wSelf) sSelf= wSelf;
-//        [SVProgressHUD dismiss];
-        
-        BOOL isSucc = YES;
-        if ([parserObject isKindOfClass:[NSDictionary class]]) {
-            IFQIngKeeListModel *listModel = [IFQIngKeeListModel yy_modelWithDictionary:(NSDictionary*)parserObject];
-            isSucc = (listModel != nil);
-            [sSelf.dataArr addObjectsFromArray:listModel.lives];
+        if (model) {
+            [sSelf.dataArr addObjectsFromArray:model.lives];
             [sSelf.tableView reloadData];
-        } else {
-            isSucc = NO;
         }
-        if (!isSucc) {
-            //TODO:加载出错
-        }
-        [wSelf.tableView endPullAnimator];
-    } failure:^(NSURLSessionDataTask *task, NSObject *cacheParserObject, NSError *requestErr) {
-        [wSelf.tableView endPullAnimator];
-        //TODO:加载出错
+        [sSelf.tableView endPullAnimator];
+    } failure:^(NSError *error, NSString *errMsg) {
+        __strong typeof(wSelf) sSelf= wSelf;
+        [sSelf.tableView endPullAnimator];
     }];
 }
 
@@ -172,7 +153,7 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 }
 
 -(void)dealloc {
-    [self.ingKeeDataTast cancel];
+    [self.ingKeeListRequest cancel];
 }
 
 @end

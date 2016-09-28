@@ -17,6 +17,8 @@
 		3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C761D86AAD40013EEC8 /* UIControl+YYAdd.m */; };
 		3F473C7A1D86AAD40013EEC8 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C781D86AAD40013EEC8 /* UIView+YYAdd.m */; };
 		3F473C7D1D86AB3C0013EEC8 /* IFQLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C7C1D86AB3C0013EEC8 /* IFQLiveViewController.m */; };
+		3F6BA22A1D9B6D6E00CE8436 /* IFQRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA2291D9B6D6E00CE8436 /* IFQRequest.m */; };
+		3F6BA22D1D9B6E3E00CE8436 /* IFQResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA22C1D9B6E3E00CE8436 /* IFQResponse.m */; };
 		3FC769AD1D81493A00AE820E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769AC1D81493A00AE820E /* main.m */; };
 		3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769AF1D81493A00AE820E /* AppDelegate.m */; };
 		3FC769B31D81493A00AE820E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769B21D81493A00AE820E /* ViewController.m */; };
@@ -63,6 +65,11 @@
 		3F473C7B1D86AB3C0013EEC8 /* IFQLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQLiveViewController.h; sourceTree = "<group>"; };
 		3F473C7C1D86AB3C0013EEC8 /* IFQLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQLiveViewController.m; sourceTree = "<group>"; };
 		3F473C7F1D86AC4F0013EEC8 /* IFQRTMPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQRTMPConfig.h; sourceTree = "<group>"; };
+		3F6BA2271D9B699100CE8436 /* IFQAPIRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQAPIRequestProtocol.h; sourceTree = "<group>"; };
+		3F6BA2281D9B6D6E00CE8436 /* IFQRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQRequest.h; sourceTree = "<group>"; };
+		3F6BA2291D9B6D6E00CE8436 /* IFQRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQRequest.m; sourceTree = "<group>"; };
+		3F6BA22B1D9B6E3E00CE8436 /* IFQResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQResponse.h; sourceTree = "<group>"; };
+		3F6BA22C1D9B6E3E00CE8436 /* IFQResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQResponse.m; sourceTree = "<group>"; };
 		3FC769A81D81493A00AE820E /* IFQLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFQLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC769AC1D81493A00AE820E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC769AE1D81493A00AE820E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +178,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		3F6BA2261D9B691D00CE8436 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3F6BA2271D9B699100CE8436 /* IFQAPIRequestProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		3F92005A1D8260EA00753FBC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +252,7 @@
 		3FC769C31D814F3C00AE820E /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				3F6BA2261D9B691D00CE8436 /* Protocol */,
 				3FD23FEE1D9A7EF8006E6682 /* Swizzling */,
 				3FD23FEA1D9A7D3F006E6682 /* Component */,
 				3F473C7E1D86AC1A0013EEC8 /* Config */,
@@ -274,6 +290,10 @@
 			children = (
 				3FC769C61D81509C00AE820E /* IFQNetworkManager.h */,
 				3FC769C71D81509C00AE820E /* IFQNetworkManager.m */,
+				3F6BA2281D9B6D6E00CE8436 /* IFQRequest.h */,
+				3F6BA2291D9B6D6E00CE8436 /* IFQRequest.m */,
+				3F6BA22B1D9B6E3E00CE8436 /* IFQResponse.h */,
+				3F6BA22C1D9B6E3E00CE8436 /* IFQResponse.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -515,6 +535,7 @@
 				3FC769E31D816D1800AE820E /* UIImageView+IFQIngKeeURL.m in Sources */,
 				3F19ACCD1D869F2200F09E8B /* SDRefreshView.m in Sources */,
 				3FC769F11D81764F00AE820E /* IFQMediaPlayerViewController.m in Sources */,
+				3F6BA22A1D9B6D6E00CE8436 /* IFQRequest.m in Sources */,
 				3F473C741D86AA8A0013EEC8 /* LFLivePreview.m in Sources */,
 				3FC769DD1D81654B00AE820E /* UIView+IFQInspectable.m in Sources */,
 				3F473C7A1D86AAD40013EEC8 /* UIView+YYAdd.m in Sources */,
@@ -522,6 +543,7 @@
 				3F473C7D1D86AB3C0013EEC8 /* IFQLiveViewController.m in Sources */,
 				3FC769B31D81493A00AE820E /* ViewController.m in Sources */,
 				3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */,
+				3F6BA22D1D9B6E3E00CE8436 /* IFQResponse.m in Sources */,
 				3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */,
 				3FC769AD1D81493A00AE820E /* main.m in Sources */,
 				3FC769C81D81509C00AE820E /* IFQNetworkManager.m in Sources */,

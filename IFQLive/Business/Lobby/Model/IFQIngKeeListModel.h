@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <YYModel/YYModel.h>
+#import "IFQAPIRequestProtocol.h"
 
 @class IFQLivesModel,IFQCreatorModel;
-@interface IFQIngKeeListModel : NSObject
+@interface IFQIngKeeListModel : NSObject<IFQAPIRequestProtocol>
 
 @property (nonatomic, assign) NSInteger expire_time;
 

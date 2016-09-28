@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IFQRequest.h"
+#import "IFQResponse.h"
 
 @interface IFQNetworkManager : NSObject
 
 + (instancetype)manager;
 
-- (NSURLSessionDataTask *)requestWithURL:(NSString *)url
-                                   paras:(NSDictionary *)parasDict
-                                 success:(void(^)(NSURLSessionDataTask *task,NSObject *parserObject))success
-                                 failure:(void(^)(NSURLSessionDataTask *task,NSObject *cacheParserObject,NSError *requestErr))failure;
+- (IFQRequest *)requestWithURL:(NSString *)url
+                         paras:(NSDictionary *)parasDict completionBlock:(void(^)(IFQResponse *response))completionBlock;
+//                                 success:(void(^)(NSURLSessionDataTask *task,NSObject *parserObject))success
+//                                 failure:(void(^)(NSURLSessionDataTask *task,NSObject *cacheParserObject,NSError *requestErr))failure;
 
 @end

@@ -9,6 +9,8 @@
 #import "IFQNetworkManager.h"
 #import <AFNetworking/AFNetworking.h>
 
+
+
 @interface IFQNetworkManager ()
 
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
@@ -47,11 +49,8 @@
     }
     return self;
 }
-
-- (NSURLSessionDataTask *)requestWithURL:(NSString *)url
-                                   paras:(NSDictionary *)parasDict
-                                 success:(void(^)(NSURLSessionDataTask *task,NSObject *parserObject))success
-                                 failure:(void(^)(NSURLSessionDataTask *task,NSObject *cacheParserObject,NSError *requestErr))failure {
+- (IFQRequest *)requestWithURL:(NSString *)url
+                         paras:(NSDictionary *)parasDict completionBlock:(void(^)(IFQResponse *response))completionBlock {
     
     NSURLSessionDataTask *dataTask = [self.sessionManager POST:url parameters:parasDict progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -63,11 +62,26 @@
             NSLog(@"======Response Start======\n%@\n======Response End=======",str);
         }
 #endif
-        success(task, responseObject);
+        if (completionBlock) {
+            IFQResponse *resp = [[IFQResponse alloc] init];
+            [resp setTask:task];
+            resp.responseObj = responseObject;
+            resp.isSucc = YES;
+            completionBlock(resp);
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failure(task, nil, error);
+        if (completionBlock) {
+            IFQResponse *resp = [[IFQResponse alloc] init];
+            [resp setTask:task];
+            resp.responseObj = nil;
+            resp.isSucc = YES;
+            resp.error = error;
+            completionBlock(resp);
+        }
     }];
-    return dataTask;
+    IFQRequest *request = [[IFQRequest alloc] init];
+    [request setTask:dataTask];
+    return request;
 }
 
 @end
