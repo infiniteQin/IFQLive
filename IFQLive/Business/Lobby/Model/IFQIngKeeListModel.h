@@ -11,6 +11,7 @@
 #import "IFQAPIRequestProtocol.h"
 
 @class IFQLivesModel,IFQCreatorModel;
+
 @interface IFQIngKeeListModel : NSObject<IFQAPIRequestProtocol>
 
 @property (nonatomic, assign) NSInteger expire_time;
@@ -22,6 +23,8 @@
 @property (nonatomic, copy) NSString *error_msg;
 
 @end
+
+
 @interface IFQLivesModel : NSObject
 
 @property (nonatomic, copy) NSString *liveId;

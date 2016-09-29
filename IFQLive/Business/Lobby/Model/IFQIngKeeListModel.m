@@ -15,8 +15,9 @@
 }
 
 + (void)requestWithURL:(NSString*)url params:(NSDictionary*)params succ:(void(^)(__kindof id model))succ failure:(void(^)(NSError *error,NSString *errMsg))failure {
-    [[IFQNetworkManager manager] requestWithURL:url paras:params completionBlock:^(IFQResponse *response) {
-        
+    [[IFQNetworkManager manager] requestWithURL:url
+                                          paras:params
+                                completionBlock:^(IFQResponse *response) {
         if (response.isSucc) {
             NSObject *respObj = response.responseObj;
             if ([respObj isKindOfClass:[NSDictionary class]]) {
@@ -28,7 +29,7 @@
             }
         }
         if (failure) {
-            failure(nil,nil);
+            failure(response.error,nil);
         }
     }];
 }

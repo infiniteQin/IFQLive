@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (IngKeeURL)
-
+- (NSString*)ifqIk_url;
 @end

@@ -8,8 +8,7 @@
 
 #import "UIImageView+IFQIngKeeURL.h"
 #import "UIImageView+IFQWebURL.h"
-
-static NSString * const ingKeeImgHost = @"http://img.meelive.cn/";
+#import "NSString+IngKeeURL.h"
 
 @implementation UIImageView (IFQIngKeeURL)
 
@@ -18,9 +17,7 @@ static NSString * const ingKeeImgHost = @"http://img.meelive.cn/";
 }
 
 - (void)ifqIk_setImageWithURL:(NSString *)url placeholderImage:(UIImage *)placeholder {
-    if (url.length>0 && (![url hasPrefix:@"http:"] || ![url hasPrefix:@"https:"])) {
-        url = [NSString stringWithFormat:@"%@%@",ingKeeImgHost,url];
-    }
+    url = [url ifqIk_url];
     [self ifq_setImageWithURL:url placeholderImage:placeholder];
 }
 

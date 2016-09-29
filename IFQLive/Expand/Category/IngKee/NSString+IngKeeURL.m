@@ -8,6 +8,14 @@
 
 #import "NSString+IngKeeURL.h"
 
-@implementation NSString (IngKeeURL)
+static NSString * const ingKeeImgHost = @"http://img.meelive.cn/";
 
+@implementation NSString (IngKeeURL)
+- (NSString*)ifqIk_url {
+    NSString *ikURL = nil;
+    if (self.length>0 && (![self hasPrefix:@"http:"] && ![self hasPrefix:@"https:"])) {
+        ikURL = [NSString stringWithFormat:@"%@%@",ingKeeImgHost,self];
+    }
+    return ikURL ? ikURL : self;
+}
 @end

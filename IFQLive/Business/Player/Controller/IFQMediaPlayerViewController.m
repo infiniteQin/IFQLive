@@ -13,13 +13,11 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "IFQRTMPConfig.h"
 #import "UIImageView+IFQIngKeeURL.h"
-//自己测试RTMP播放地址
-
 
 @interface IFQMediaPlayerViewController ()
 
-@property (nonatomic, strong) IJKFFMoviePlayerController *player;
-@property (nonatomic, strong)   UIImageView *loadingMaskView;
+@property (nonatomic, strong) IJKFFMoviePlayerController    *player;
+@property (nonatomic, strong) UIImageView                   *loadingMaskView;
 
 @end
 
@@ -63,8 +61,6 @@
 }
 
 - (void)appDidBecomeActive {
-//    [self.player prepareToPlay];
-//    [self.player play];
     [self reSetupPlayer];
     [self.player prepareToPlay];
 }

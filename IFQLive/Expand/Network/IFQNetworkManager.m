@@ -33,11 +33,7 @@
     self = [super init];
     if (self) {
         _sessionManager = [AFHTTPSessionManager manager];
-//        _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         _sessionManager.requestSerializer.timeoutInterval = 10.;
-//        _sessionManager.r
-//        [_sessionManager.requestSerializer setValue:@"" forHTTPHeaderField:@"User-Agent"];
         //去除NSnull
         if ([_sessionManager.responseSerializer isKindOfClass:[AFJSONResponseSerializer class]]) {
             [(AFJSONResponseSerializer*)_sessionManager.responseSerializer setRemovesKeysWithNullValues:YES];
@@ -50,8 +46,8 @@
     return self;
 }
 - (IFQRequest *)requestWithURL:(NSString *)url
-                         paras:(NSDictionary *)parasDict completionBlock:(void(^)(IFQResponse *response))completionBlock {
-    
+                         paras:(NSDictionary *)parasDict
+               completionBlock:(void(^)(IFQResponse *response))completionBlock {
     NSURLSessionDataTask *dataTask = [self.sessionManager POST:url parameters:parasDict progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -60,6 +56,8 @@
         if ([responseObject isKindOfClass:[NSData class]]) {
             NSString *str = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSLog(@"======Response Start======\n%@\n======Response End=======",str);
+        }else {
+            NSLog(@"======Response Start======\n%@\n======Response End=======",responseObject);
         }
 #endif
         if (completionBlock) {

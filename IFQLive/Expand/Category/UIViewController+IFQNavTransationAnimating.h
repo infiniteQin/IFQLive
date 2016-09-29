@@ -10,4 +10,6 @@
 
 @interface UIViewController (IFQNavTransationAnimating)
 
+@property (nonatomic, assign) BOOL ifq_navTransationAnimating;
+
 @end

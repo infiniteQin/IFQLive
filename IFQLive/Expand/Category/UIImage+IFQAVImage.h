@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (IFQAVImage)
-
++(instancetype)ifq_imageWithVideoURL:(NSString *)videoURL;
 @end

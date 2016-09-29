@@ -7,7 +7,12 @@
 //
 
 #import "UIImage+IFQIngKeeAVImage.h"
+#import "UIImage+IFQAVImage.h"
+#import "NSString+IngKeeURL.h"
 
 @implementation UIImage (IFQIngKeeAVImage)
-
++(instancetype)ifqIk_imageWithVideoURL:(NSString *)videoURL {
+    videoURL = [videoURL ifqIk_url];
+    return [self ifq_imageWithVideoURL:videoURL];
+}
 @end
