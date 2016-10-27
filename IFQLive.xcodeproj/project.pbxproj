@@ -12,7 +12,13 @@
 		3F19ACCC1D869F2200F09E8B /* SDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F19ACC51D869F2200F09E8B /* SDRefreshHeaderView.m */; };
 		3F19ACCD1D869F2200F09E8B /* SDRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F19ACC71D869F2200F09E8B /* SDRefreshView.m */; };
 		3F19ACCE1D869F2200F09E8B /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F19ACC91D869F2200F09E8B /* UIView+SDExtension.m */; };
+		3F1F65E81DB0B57E00D90237 /* IFQWebSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F65E71DB0B57E00D90237 /* IFQWebSocketClient.m */; };
+		3F1F65F31DB0B88400D90237 /* IFQConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F65F21DB0B88400D90237 /* IFQConversationListViewController.m */; };
+		3F1F65F71DB0BC0000D90237 /* IFQConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F65F51DB0BC0000D90237 /* IFQConversationListCell.m */; };
+		3F1F65F81DB0BC0000D90237 /* IFQConversationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1F65F61DB0BC0000D90237 /* IFQConversationListCell.xib */; };
+		3F1F65FB1DB0C0C200D90237 /* IFQChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F65FA1DB0C0C200D90237 /* IFQChatRoomViewController.m */; };
 		3F45A2DE1D9CBC5B00995B56 /* UIViewController+IFQNavTransationAnimating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F45A2DD1D9CBC5B00995B56 /* UIViewController+IFQNavTransationAnimating.m */; };
+		3F45A2E71D9D09C600995B56 /* IFQActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F45A2E61D9D09C600995B56 /* IFQActivityViewController.m */; };
 		3F473C6A1D86A3880013EEC8 /* UIScrollView+IFQRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C691D86A3880013EEC8 /* UIScrollView+IFQRefresh.m */; };
 		3F473C741D86AA8A0013EEC8 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C731D86AA8A0013EEC8 /* LFLivePreview.m */; };
 		3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C761D86AAD40013EEC8 /* UIControl+YYAdd.m */; };
@@ -57,8 +63,19 @@
 		3F19ACC71D869F2200F09E8B /* SDRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRefreshView.m; sourceTree = "<group>"; };
 		3F19ACC81D869F2200F09E8B /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		3F19ACC91D869F2200F09E8B /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		3F1F65E61DB0B57E00D90237 /* IFQWebSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQWebSocketClient.h; sourceTree = "<group>"; };
+		3F1F65E71DB0B57E00D90237 /* IFQWebSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQWebSocketClient.m; sourceTree = "<group>"; };
+		3F1F65F11DB0B88400D90237 /* IFQConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQConversationListViewController.h; sourceTree = "<group>"; };
+		3F1F65F21DB0B88400D90237 /* IFQConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQConversationListViewController.m; sourceTree = "<group>"; };
+		3F1F65F41DB0BC0000D90237 /* IFQConversationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQConversationListCell.h; sourceTree = "<group>"; };
+		3F1F65F51DB0BC0000D90237 /* IFQConversationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQConversationListCell.m; sourceTree = "<group>"; };
+		3F1F65F61DB0BC0000D90237 /* IFQConversationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFQConversationListCell.xib; sourceTree = "<group>"; };
+		3F1F65F91DB0C0C200D90237 /* IFQChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQChatRoomViewController.h; sourceTree = "<group>"; };
+		3F1F65FA1DB0C0C200D90237 /* IFQChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQChatRoomViewController.m; sourceTree = "<group>"; };
 		3F45A2DC1D9CBC5B00995B56 /* UIViewController+IFQNavTransationAnimating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IFQNavTransationAnimating.h"; sourceTree = "<group>"; };
 		3F45A2DD1D9CBC5B00995B56 /* UIViewController+IFQNavTransationAnimating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IFQNavTransationAnimating.m"; sourceTree = "<group>"; };
+		3F45A2E51D9D09C600995B56 /* IFQActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQActivityViewController.h; sourceTree = "<group>"; };
+		3F45A2E61D9D09C600995B56 /* IFQActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQActivityViewController.m; sourceTree = "<group>"; };
 		3F473C681D86A3880013EEC8 /* UIScrollView+IFQRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IFQRefresh.h"; sourceTree = "<group>"; };
 		3F473C691D86A3880013EEC8 /* UIScrollView+IFQRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IFQRefresh.m"; sourceTree = "<group>"; };
 		3F473C721D86AA8A0013EEC8 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
@@ -150,6 +167,54 @@
 				3F19ACC91D869F2200F09E8B /* UIView+SDExtension.m */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		3F1F65E51DB0B54700D90237 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F65E61DB0B57E00D90237 /* IFQWebSocketClient.h */,
+				3F1F65E71DB0B57E00D90237 /* IFQWebSocketClient.m */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		3F1F65ED1DB0B77600D90237 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F65F01DB0B83000D90237 /* Controller */,
+				3F1F65EF1DB0B82100D90237 /* View */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		3F1F65EF1DB0B82100D90237 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F65F41DB0BC0000D90237 /* IFQConversationListCell.h */,
+				3F1F65F51DB0BC0000D90237 /* IFQConversationListCell.m */,
+				3F1F65F61DB0BC0000D90237 /* IFQConversationListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F1F65F01DB0B83000D90237 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F65F11DB0B88400D90237 /* IFQConversationListViewController.h */,
+				3F1F65F21DB0B88400D90237 /* IFQConversationListViewController.m */,
+				3F1F65F91DB0C0C200D90237 /* IFQChatRoomViewController.h */,
+				3F1F65FA1DB0C0C200D90237 /* IFQChatRoomViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F45A2E41D9D08A000995B56 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				3F45A2E51D9D09C600995B56 /* IFQActivityViewController.h */,
+				3F45A2E61D9D09C600995B56 /* IFQActivityViewController.m */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		3F473C6B1D86A9F70013EEC8 /* Live */ = {
@@ -262,6 +327,7 @@
 		3FC769C21D814F2D00AE820E /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F65ED1DB0B77600D90237 /* IM */,
 				3F473C6B1D86A9F70013EEC8 /* Live */,
 				3FC769ED1D81764F00AE820E /* Player */,
 				3FC769C91D81539A00AE820E /* Lobby */,
@@ -272,6 +338,8 @@
 		3FC769C31D814F3C00AE820E /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F65E51DB0B54700D90237 /* WebSocket */,
+				3F45A2E41D9D08A000995B56 /* Share */,
 				3F6BA2261D9B691D00CE8436 /* Protocol */,
 				3FD23FEE1D9A7EF8006E6682 /* Swizzling */,
 				3FD23FEA1D9A7D3F006E6682 /* Component */,
@@ -462,6 +530,7 @@
 					3FC769A71D81493A00AE820E = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8YA2BKNJF5;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -493,6 +562,7 @@
 				3F19ACCA1D869F2200F09E8B /* sdRefeshView_arrow@2x.png in Resources */,
 				3FC769B81D81493A00AE820E /* Assets.xcassets in Resources */,
 				3FC769B61D81493A00AE820E /* Main.storyboard in Resources */,
+				3F1F65F81DB0BC0000D90237 /* IFQConversationListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +623,9 @@
 			files = (
 				3FD23FF31D9A7FB8006E6682 /* IFQMethodSwizzle.c in Sources */,
 				3F19ACCB1D869F2200F09E8B /* SDRefreshFooterView.m in Sources */,
+				3F1F65F31DB0B88400D90237 /* IFQConversationListViewController.m in Sources */,
 				3FD23FED1D9A7DCC006E6682 /* UINavigationController+IFQTransation.m in Sources */,
+				3F1F65E81DB0B57E00D90237 /* IFQWebSocketClient.m in Sources */,
 				3F19ACCC1D869F2200F09E8B /* SDRefreshHeaderView.m in Sources */,
 				3F6BA2301D9B7B7A00CE8436 /* UIImage+IFQAVImage.m in Sources */,
 				3F19ACCD1D869F2200F09E8B /* SDRefreshView.m in Sources */,
@@ -567,16 +639,19 @@
 				3F473C7D1D86AB3C0013EEC8 /* IFQLiveViewController.m in Sources */,
 				3F6BA2371D9B7C3600CE8436 /* UIImage+IFQIngKeeAVImage.m in Sources */,
 				3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */,
+				3F1F65FB1DB0C0C200D90237 /* IFQChatRoomViewController.m in Sources */,
 				3F6BA22D1D9B6E3E00CE8436 /* IFQResponse.m in Sources */,
 				3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */,
 				3F6BA23A1D9B7CD000CE8436 /* NSString+IngKeeURL.m in Sources */,
 				3FC769AD1D81493A00AE820E /* main.m in Sources */,
 				3FC769C81D81509C00AE820E /* IFQNetworkManager.m in Sources */,
 				3FC769CF1D81549B00AE820E /* IFQLobbyViewController.m in Sources */,
+				3F1F65F71DB0BC0000D90237 /* IFQConversationListCell.m in Sources */,
 				3F6BA2341D9B7C2100CE8436 /* UIImageView+IFQIngKeeURL.m in Sources */,
 				3FC769D51D815E6200AE820E /* IFQIngKeeListModel.m in Sources */,
 				3FC769E01D816B2900AE820E /* UIImageView+IFQWebURL.m in Sources */,
 				3F19ACCE1D869F2200F09E8B /* UIView+SDExtension.m in Sources */,
+				3F45A2E71D9D09C600995B56 /* IFQActivityViewController.m in Sources */,
 				3FC769D91D8162DB00AE820E /* IFQLobbyItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +766,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zuo Wei (2V9QJGYNKL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IFQFrameworks",
@@ -699,9 +775,10 @@
 				INFOPLIST_FILE = IFQLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Qiuyin.XiangQU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qiuyin.Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c4f7123a-da25-446a-8b5a-325fd1e596b9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -711,7 +788,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zuo Wei (2V9QJGYNKL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IFQFrameworks",
@@ -719,9 +797,10 @@
 				INFOPLIST_FILE = IFQLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Qiuyin.XiangQU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qiuyin.Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c4f7123a-da25-446a-8b5a-325fd1e596b9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

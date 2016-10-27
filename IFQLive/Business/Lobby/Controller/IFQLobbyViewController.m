@@ -16,6 +16,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "IFQLiveViewController.h"
 #import "UIImage+IFQIngKeeAVImage.h"
+#import "IFQActivityViewController.h"
+#import "NSString+IngKeeURL.h"
 
 #define Ratio 420/320
 #define INGKEE_LIST_URL ([NSString stringWithFormat:@"http://service.ingkee.com/api/live/gettop?imsi=&uid=17800399&proto=5&idfa=A1205EB8-0C9A-4131-A2A2-27B9A1E06622&lc=0000000000000026&cc=TG0001&imei=&sid=20i0a3GAvc8ykfClKMAen8WNeIBKrUwgdG9whVJ0ljXi1Af8hQci3&cv=IK3.1.00_Iphone&devi=bcb94097c7a3f3314be284c8a5be2aaeae66d6ab&conn=Wifi&ua=iPhone&idfv=DEBAD23B-7C6A-4251-B8AF-A95910B778B7&osversion=ios_9.300000&count=5&multiaddr=1"])
@@ -84,10 +86,13 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     IFQLivesModel *liveModel = self.dataArr[indexPath.row];
     IFQCreatorModel *creator = liveModel.creator;
-    
     [self pushToPlayWithStreamURL:liveModel.stream_addr preImgURL:creator.portrait];
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UIScreen mainScreen].bounds.size.width * Ratio + 1;
+}
 
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -100,12 +105,14 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
     
 }
 
+
+
 #pragma mark Network
 #pragma mark -- Request
 - (void)requestListData {
     __weak typeof(self) wSelf = self;
     [self.ingKeeListRequest cancel];
-    [IFQIngKeeListModel requestWithURL:INGKEE_LIST_URL params:nil succ:^(IFQIngKeeListModel *model) {
+    self.ingKeeListRequest = [IFQIngKeeListModel requestWithURL:INGKEE_LIST_URL params:nil succ:^(IFQIngKeeListModel *model) {
         __strong typeof(wSelf) sSelf= wSelf;
         if (model) {
             [sSelf.dataArr addObjectsFromArray:model.lives];
@@ -137,6 +144,7 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
     IFQMediaPlayerViewController *mediaPlayerVC = [[IFQMediaPlayerViewController alloc] init];
     mediaPlayerVC.preImgURL = preImgURL;
     mediaPlayerVC.mediaURL  = streamURL;
+    mediaPlayerVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mediaPlayerVC animated:YES];
 }
 

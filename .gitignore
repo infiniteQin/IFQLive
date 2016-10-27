@@ -534,3 +534,14 @@ Pods/Target Support Files/KMNavigationBarTransition/KMNavigationBarTransition-pr
 Pods/Target Support Files/KMNavigationBarTransition/KMNavigationBarTransition-umbrella.h
 Pods/Target Support Files/KMNavigationBarTransition/KMNavigationBarTransition.modulemap
 Pods/Target Support Files/KMNavigationBarTransition/KMNavigationBarTransition.xcconfig
+Pods/SocketRocket/LICENSE
+Pods/SocketRocket/README.rst
+Pods/SocketRocket/SocketRocket/SocketRocket.h
+Pods/SocketRocket/SocketRocket/SRWebSocket.h
+Pods/SocketRocket/SocketRocket/SRWebSocket.m
+Pods/Target Support Files/SocketRocket/Info.plist
+Pods/Target Support Files/SocketRocket/SocketRocket-dummy.m
+Pods/Target Support Files/SocketRocket/SocketRocket-prefix.pch
+Pods/Target Support Files/SocketRocket/SocketRocket-umbrella.h
+Pods/Target Support Files/SocketRocket/SocketRocket.modulemap
+Pods/Target Support Files/SocketRocket/SocketRocket.xcconfig

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="IFQConversationListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-nx-e66">
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vTu-nx-e66" secondAttribute="height" multiplier="1:1" id="JUK-xh-Sbv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlh-nn-HpL">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="x3R-Qj-vZ2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmg-Jv-I8a">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天 10:20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR5-4f-WNX">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rmg-Jv-I8a" firstAttribute="leading" secondItem="vTu-nx-e66" secondAttribute="trailing" constant="8" id="35E-Tm-lWY"/>
+                    <constraint firstItem="rmg-Jv-I8a" firstAttribute="bottom" secondItem="vTu-nx-e66" secondAttribute="bottom" id="KH3-wV-VUD"/>
+                    <constraint firstAttribute="bottom" secondItem="vTu-nx-e66" secondAttribute="bottom" constant="8" id="N5P-SH-OH5"/>
+                    <constraint firstAttribute="trailing" secondItem="LR5-4f-WNX" secondAttribute="trailing" constant="8" id="UV9-Uq-LAn"/>
+                    <constraint firstItem="Jlh-nn-HpL" firstAttribute="top" secondItem="vTu-nx-e66" secondAttribute="top" id="XOf-PH-VmO"/>
+                    <constraint firstItem="LR5-4f-WNX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hTp-qr-uEV"/>
+                    <constraint firstAttribute="trailing" secondItem="rmg-Jv-I8a" secondAttribute="trailing" constant="8" id="m6K-Gr-dmC"/>
+                    <constraint firstItem="vTu-nx-e66" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="o4u-mJ-Tn7"/>
+                    <constraint firstItem="Jlh-nn-HpL" firstAttribute="leading" secondItem="vTu-nx-e66" secondAttribute="trailing" constant="8" id="ohU-dm-F8S"/>
+                    <constraint firstItem="vTu-nx-e66" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="yaB-dj-YZx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatorImgView" destination="vTu-nx-e66" id="9gj-mB-BbJ"/>
+                <outlet property="lastMsgLabel" destination="rmg-Jv-I8a" id="QVe-sm-v2Y"/>
+                <outlet property="nickLabel" destination="Jlh-nn-HpL" id="Oj8-DB-B46"/>
+                <outlet property="timeLabel" destination="LR5-4f-WNX" id="i7v-vB-ALp"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="130"/>
+        </tableViewCell>
+    </objects>
+</document>

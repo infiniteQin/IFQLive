@@ -14,4 +14,6 @@ static NSString * const kCustPlayRTMPURL = nil;
 // 直播推流地址
 static NSString * const kLiveStreamURL = @"rtmp://10.8.82.45:1935/rtmplive/home";
 
+static NSString * const kWebSocketURL  = @"ws://localhost:3000";
+
 #endif /* IFQRTMPConfig_h */

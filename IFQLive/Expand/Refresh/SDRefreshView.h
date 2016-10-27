@@ -53,7 +53,6 @@ typedef enum {
 - (void)addTarget:(id)target refreshAction:(SEL)action;
 - (void)endRefreshing;
 
-
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, assign) SDRefreshViewState refreshState;
 @property (nonatomic, copy) NSString *textForNormalState;

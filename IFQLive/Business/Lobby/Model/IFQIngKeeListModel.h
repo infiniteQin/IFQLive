@@ -20,14 +20,14 @@
 
 @property (nonatomic, strong) NSArray<IFQLivesModel *> *lives;
 
-@property (nonatomic, copy) NSString *error_msg;
+@property (nonatomic, copy)   NSString *error_msg;
 
 @end
 
 
 @interface IFQLivesModel : NSObject
 
-@property (nonatomic, copy) NSString *liveId;
+@property (nonatomic, copy)   NSString  *liveId;
 
 @property (nonatomic, assign) NSInteger room_id;
 
@@ -41,25 +41,25 @@
 
 @property (nonatomic, assign) NSInteger link;
 
-@property (nonatomic, copy) NSString *share_addr;
+@property (nonatomic, copy)   NSString  *share_addr;
 
 @property (nonatomic, assign) NSInteger slot;
 
 @property (nonatomic, strong) IFQCreatorModel *creator;
 
-@property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy)   NSString *image;
 
-@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy)   NSString *city;
 
 @property (nonatomic, assign) NSInteger group;
 
-@property (nonatomic, copy) NSString *stream_addr;
+@property (nonatomic, copy)   NSString *stream_addr;
 
 @property (nonatomic, assign) NSInteger pub_stat;
 
 @property (nonatomic, assign) NSInteger optimal;
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy)   NSString *name;
 
 @property (nonatomic, assign) NSInteger status;
 

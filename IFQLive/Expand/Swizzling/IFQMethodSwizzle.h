@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include <objc/runtime.h>
 
-void IFQSwizzleMethod(Class cls, SEL originalSelector, SEL swizzledSelector);
+extern void IFQSwizzleMethod(Class cls, SEL originalSelector, SEL swizzledSelector);
 
 #endif /* IFQMethodSwizzle_h */

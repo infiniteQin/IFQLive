@@ -4,7 +4,7 @@ platform :ios, '7.0'
 use_frameworks!
 
 def pods
-    pod 'LFLiveKit', :git => 'https://github.com/LaiFengiOS/LFLiveKit.git'
+    pod 'LFLiveKit', '~> 2.3'
     pod 'AFNetworking', '~> 3.1.0'
     pod 'ReactiveCocoa', '~> 2.5'
     pod 'YYModel', '~> 1.0.4'
@@ -12,6 +12,7 @@ def pods
     pod 'SDWebImage', '~> 3.8.1'
     pod 'Masonry', '~> 1.0.1'
     pod 'KMNavigationBarTransition', '~> 0.0.10'
+    pod 'SocketRocket', '~> 0.5.1'
 end
 
 target 'IFQLive' do

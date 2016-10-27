@@ -16,5 +16,4 @@ typedef void (^IFQStartFreshBlock)();
 
 - (void)endPullAnimator;
 
-
 @end
