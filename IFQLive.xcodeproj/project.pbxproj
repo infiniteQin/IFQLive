@@ -24,6 +24,11 @@
 		3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C761D86AAD40013EEC8 /* UIControl+YYAdd.m */; };
 		3F473C7A1D86AAD40013EEC8 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C781D86AAD40013EEC8 /* UIView+YYAdd.m */; };
 		3F473C7D1D86AB3C0013EEC8 /* IFQLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F473C7C1D86AB3C0013EEC8 /* IFQLiveViewController.m */; };
+		3F5471961DC2F88D00FA734D /* IFQMsgFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5471941DC2F88D00FA734D /* IFQMsgFile.m */; };
+		3F5471971DC2F88D00FA734D /* IFQBaseIMMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5471951DC2F88D00FA734D /* IFQBaseIMMsg.m */; };
+		3F54719A1DC2F8AF00FA734D /* IFQTextMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5471991DC2F8AF00FA734D /* IFQTextMsg.m */; };
+		3F54719D1DC2F9C100FA734D /* IFQIMMsgCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F54719C1DC2F9C100FA734D /* IFQIMMsgCreator.m */; };
+		3F5471A01DC329FE00FA734D /* IFQLoginMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F54719F1DC329FE00FA734D /* IFQLoginMsg.m */; };
 		3F6BA22A1D9B6D6E00CE8436 /* IFQRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA2291D9B6D6E00CE8436 /* IFQRequest.m */; };
 		3F6BA22D1D9B6E3E00CE8436 /* IFQResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA22C1D9B6E3E00CE8436 /* IFQResponse.m */; };
 		3F6BA2301D9B7B7A00CE8436 /* UIImage+IFQAVImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA22F1D9B7B7A00CE8436 /* UIImage+IFQAVImage.m */; };
@@ -87,6 +92,17 @@
 		3F473C7B1D86AB3C0013EEC8 /* IFQLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQLiveViewController.h; sourceTree = "<group>"; };
 		3F473C7C1D86AB3C0013EEC8 /* IFQLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQLiveViewController.m; sourceTree = "<group>"; };
 		3F473C7F1D86AC4F0013EEC8 /* IFQRTMPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQRTMPConfig.h; sourceTree = "<group>"; };
+		3F5471911DC2F88C00FA734D /* IFQBaseIMMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQBaseIMMsg.h; sourceTree = "<group>"; };
+		3F5471921DC2F88C00FA734D /* IFQMsgFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQMsgFile.h; sourceTree = "<group>"; };
+		3F5471931DC2F88C00FA734D /* IFQMsgFileExtendInfo-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IFQMsgFileExtendInfo-Protocol.h"; sourceTree = "<group>"; };
+		3F5471941DC2F88D00FA734D /* IFQMsgFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQMsgFile.m; sourceTree = "<group>"; };
+		3F5471951DC2F88D00FA734D /* IFQBaseIMMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQBaseIMMsg.m; sourceTree = "<group>"; };
+		3F5471981DC2F8AF00FA734D /* IFQTextMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQTextMsg.h; sourceTree = "<group>"; };
+		3F5471991DC2F8AF00FA734D /* IFQTextMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQTextMsg.m; sourceTree = "<group>"; };
+		3F54719B1DC2F9C100FA734D /* IFQIMMsgCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQIMMsgCreator.h; sourceTree = "<group>"; };
+		3F54719C1DC2F9C100FA734D /* IFQIMMsgCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQIMMsgCreator.m; sourceTree = "<group>"; };
+		3F54719E1DC329FE00FA734D /* IFQLoginMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQLoginMsg.h; sourceTree = "<group>"; };
+		3F54719F1DC329FE00FA734D /* IFQLoginMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQLoginMsg.m; sourceTree = "<group>"; };
 		3F6BA2271D9B699100CE8436 /* IFQAPIRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQAPIRequestProtocol.h; sourceTree = "<group>"; };
 		3F6BA2281D9B6D6E00CE8436 /* IFQRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQRequest.h; sourceTree = "<group>"; };
 		3F6BA2291D9B6D6E00CE8436 /* IFQRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQRequest.m; sourceTree = "<group>"; };
@@ -172,6 +188,7 @@
 		3F1F65E51DB0B54700D90237 /* WebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3F5471881DC2F10200FA734D /* Message */,
 				3F1F65E61DB0B57E00D90237 /* IFQWebSocketClient.h */,
 				3F1F65E71DB0B57E00D90237 /* IFQWebSocketClient.m */,
 			);
@@ -250,6 +267,32 @@
 				3F473C7F1D86AC4F0013EEC8 /* IFQRTMPConfig.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		3F5471881DC2F10200FA734D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3F5471901DC2F84C00FA734D /* Base */,
+				3F5471981DC2F8AF00FA734D /* IFQTextMsg.h */,
+				3F5471991DC2F8AF00FA734D /* IFQTextMsg.m */,
+				3F54719B1DC2F9C100FA734D /* IFQIMMsgCreator.h */,
+				3F54719C1DC2F9C100FA734D /* IFQIMMsgCreator.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3F5471901DC2F84C00FA734D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3F5471931DC2F88C00FA734D /* IFQMsgFileExtendInfo-Protocol.h */,
+				3F5471911DC2F88C00FA734D /* IFQBaseIMMsg.h */,
+				3F5471951DC2F88D00FA734D /* IFQBaseIMMsg.m */,
+				3F5471921DC2F88C00FA734D /* IFQMsgFile.h */,
+				3F5471941DC2F88D00FA734D /* IFQMsgFile.m */,
+				3F54719E1DC329FE00FA734D /* IFQLoginMsg.h */,
+				3F54719F1DC329FE00FA734D /* IFQLoginMsg.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		3F6BA2261D9B691D00CE8436 /* Protocol */ = {
@@ -622,8 +665,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD23FF31D9A7FB8006E6682 /* IFQMethodSwizzle.c in Sources */,
+				3F54719D1DC2F9C100FA734D /* IFQIMMsgCreator.m in Sources */,
+				3F54719A1DC2F8AF00FA734D /* IFQTextMsg.m in Sources */,
 				3F19ACCB1D869F2200F09E8B /* SDRefreshFooterView.m in Sources */,
 				3F1F65F31DB0B88400D90237 /* IFQConversationListViewController.m in Sources */,
+				3F5471971DC2F88D00FA734D /* IFQBaseIMMsg.m in Sources */,
 				3FD23FED1D9A7DCC006E6682 /* UINavigationController+IFQTransation.m in Sources */,
 				3F1F65E81DB0B57E00D90237 /* IFQWebSocketClient.m in Sources */,
 				3F19ACCC1D869F2200F09E8B /* SDRefreshHeaderView.m in Sources */,
@@ -640,7 +686,9 @@
 				3F6BA2371D9B7C3600CE8436 /* UIImage+IFQIngKeeAVImage.m in Sources */,
 				3FC769B01D81493A00AE820E /* AppDelegate.m in Sources */,
 				3F1F65FB1DB0C0C200D90237 /* IFQChatRoomViewController.m in Sources */,
+				3F5471A01DC329FE00FA734D /* IFQLoginMsg.m in Sources */,
 				3F6BA22D1D9B6E3E00CE8436 /* IFQResponse.m in Sources */,
+				3F5471961DC2F88D00FA734D /* IFQMsgFile.m in Sources */,
 				3F473C791D86AAD40013EEC8 /* UIControl+YYAdd.m in Sources */,
 				3F6BA23A1D9B7CD000CE8436 /* NSString+IngKeeURL.m in Sources */,
 				3FC769AD1D81493A00AE820E /* main.m in Sources */,

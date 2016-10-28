@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SocketRocket/SocketRocket.h>
+#import "IFQBaseIMMsg.h"
 
 @protocol IFQWebSocketClientDelegate <NSObject>
 
@@ -22,7 +23,9 @@
 
 - (void)connectWithURL:(NSString*)url;
 
-- (void)sendMsg:(id)msg;
+- (void)sendMsg:(IFQBaseIMMsg*)msg;
+
+- (void)close;
 
 @end
 

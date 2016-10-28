@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IFQWebSocketClient.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[IFQWebSocketClient sharedInstance] connectWithURL:@"ws://127.0.0.1:8080"];
     return YES;
 }
 

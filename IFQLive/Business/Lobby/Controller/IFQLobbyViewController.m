@@ -38,8 +38,8 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.navigationController.navigationBar.translucent = NO;
-    self.edgesForExtendedLayout               = UIRectEdgeNone;
-
+//    self.edgesForExtendedLayout               = UIRectEdgeTop;
+//    self.automaticallyAdjustsScrollViewInsets = YES;
     { // tableView
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
