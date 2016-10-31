@@ -12,8 +12,8 @@
 
 @implementation IFQIMMsgCreator
 
-+ (IFQBaseIMMsg*)textMsg:(NSString*)text {
-    return [IFQTextMsg textMsgWithText:text];
++ (IFQBaseIMMsg*)textMsg:(NSString*)text toUsr:(NSString*)toUsr{
+    return [IFQTextMsg textMsgWithText:text toUsr:toUsr];
 }
 
 + (IFQBaseIMMsg*)loginMsgWithUsrName:(NSString*)usrName password:(NSString*)password {

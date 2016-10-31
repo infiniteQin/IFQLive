@@ -25,8 +25,8 @@ var onLogin = function( ws, usrName, pwd) {
 
 //==============接收&转发消息====================
 var onTextMsg = function(ws,toUsr,text) {
-
 	if (!ws.hasLogin) {
+		console.log('未登录,请先登录');
 		ws.send('未登录,请先登录');
 		return;
 	}
@@ -35,6 +35,9 @@ var onTextMsg = function(ws,toUsr,text) {
 	if (tows && tows.hasLogin) {
 		console.log('say to '+toUsr+':'+text);
 		tows.send(text);
+	}else {
+		console.log('对方离线...');
+		ws.send('对方离线...');
 	}
 };
 
@@ -63,3 +66,5 @@ wss.on('connection', function(ws) {
     ws.send('connection succ');
 
 });
+
+//半夏/夏枯草/寻骨风/白苏子/五加皮/徐长卿/[cāng zhú] 苍术

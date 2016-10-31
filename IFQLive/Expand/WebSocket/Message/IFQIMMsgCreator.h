@@ -11,7 +11,7 @@
 
 @interface IFQIMMsgCreator : NSObject
 
-+ (IFQBaseIMMsg*)textMsg:(NSString*)text;
++ (IFQBaseIMMsg*)textMsg:(NSString*)text toUsr:(NSString*)toUsr;
 
 + (IFQBaseIMMsg*)loginMsgWithUsrName:(NSString*)usrName password:(NSString*)password;
 

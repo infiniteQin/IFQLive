@@ -35,4 +35,6 @@ typedef NS_ENUM(NSUInteger,IFQBaseIMMsgStatus) {
 
 @property (nonatomic, copy, readonly)   NSString            *contentWrap;
 
+@property (nonatomic, copy) NSString   *toUsr;
+
 @end

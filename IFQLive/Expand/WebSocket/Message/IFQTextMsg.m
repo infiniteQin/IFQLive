@@ -11,11 +11,11 @@
 
 @implementation IFQTextMsg
 
-+ (instancetype)textMsgWithText:(NSString*)text {
++ (instancetype)textMsgWithText:(NSString*)text toUsr:(NSString*)toUsr{
     IFQTextMsg *textMsg = [[self alloc] init];
     textMsg.type = IFQBaseIMMsgTypeText;
     textMsg.content = text;
-    
+    textMsg.toUsr   = toUsr;
     return textMsg;
 }
 
@@ -23,6 +23,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setObject:@(IFQBaseIMMsgTypeText) forKey:@"type"];
     [param setObject:self.content forKey:@"content"];
+    [param setObject:self.toUsr forKey:@"toUsr"];
     return [param yy_modelToJSONString];
 }
 

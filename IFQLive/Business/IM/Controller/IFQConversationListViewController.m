@@ -23,7 +23,9 @@ static NSString * const kConversationListCell = @"IFQConversationListCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[IFQWebSocketClient sharedInstance] connectWithURL:@"ws://127.0.0.1:8080"];
+    IFQBaseIMMsg *loginMsg = [IFQIMMsgCreator loginMsgWithUsrName:@"bbb" password:@"123456"];
+    [[IFQWebSocketClient sharedInstance] sendMsg:loginMsg];
     {//
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.title = @"消息中心";
@@ -57,9 +59,8 @@ static NSString * const kConversationListCell = @"IFQConversationListCell";
 #pragma mark UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    IFQBaseIMMsg *msg = [IFQIMMsgCreator textMsg:@"文本内容"];
-    IFQBaseIMMsg *loginMsg = [IFQIMMsgCreator loginMsgWithUsrName:@"aaa" password:@"123"];
-    [[IFQWebSocketClient sharedInstance] sendMsg:loginMsg];
+    IFQBaseIMMsg *msg = [IFQIMMsgCreator textMsg:@"文本内容" toUsr:@"bbb"];
+    [[IFQWebSocketClient sharedInstance] sendMsg:msg];
 }
 
 - (void)didReceiveMemoryWarning {

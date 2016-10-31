@@ -11,6 +11,6 @@
 
 @interface IFQTextMsg : IFQBaseIMMsg
 
-+ (instancetype)textMsgWithText:(NSString*)text;
++ (instancetype)textMsgWithText:(NSString*)text toUsr:(NSString*)toUsr;
 
 @end
