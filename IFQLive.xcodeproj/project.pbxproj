@@ -48,14 +48,38 @@
 		3FC769DD1D81654B00AE820E /* UIView+IFQInspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769DC1D81654B00AE820E /* UIView+IFQInspectable.m */; };
 		3FC769E01D816B2900AE820E /* UIImageView+IFQWebURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769DF1D816B2900AE820E /* UIImageView+IFQWebURL.m */; };
 		3FC769F11D81764F00AE820E /* IFQMediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC769F01D81764F00AE820E /* IFQMediaPlayerViewController.m */; };
-		3FC769F31D817C3A00AE820E /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769E51D81747900AE820E /* IJKMediaFramework.framework */; };
 		3FC769F51D817CBB00AE820E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F41D817CBB00AE820E /* libz.tbd */; };
 		3FC769F71D817CD300AE820E /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F61D817CD300AE820E /* libbz2.tbd */; };
 		3FC769F91D817CE000AE820E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC769F81D817CE000AE820E /* libiconv.tbd */; };
 		3FD23FED1D9A7DCC006E6682 /* UINavigationController+IFQTransation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD23FEC1D9A7DCC006E6682 /* UINavigationController+IFQTransation.m */; };
 		3FD23FF31D9A7FB8006E6682 /* IFQMethodSwizzle.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FD23FF11D9A7FB8006E6682 /* IFQMethodSwizzle.c */; };
+		B8C9DEE41DCC51F80017FF24 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C9DEDD1DCC50C70017FF24 /* IJKMediaFramework.framework */; };
 		E493E01CB6096B977B57C786 /* Pods_IFQLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44718AFBBC53B6E0B56C0B3A /* Pods_IFQLive.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8C9DEDC1DCC50C70017FF24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E654EA8A1B6B27E600B0F2D0;
+			remoteInfo = IJKMediaFramework;
+		};
+		B8C9DEDE1DCC50C70017FF24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E654EA941B6B27E600B0F2D0;
+			remoteInfo = IJKMediaFrameworkTests;
+		};
+		B8C9DEE01DCC51000017FF24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E654EA891B6B27E600B0F2D0;
+			remoteInfo = IJKMediaFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3F19ACC01D869F2200F09E8B /* sdRefeshView_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdRefeshView_arrow@2x.png"; sourceTree = "<group>"; };
@@ -137,7 +161,6 @@
 		3FC769DC1D81654B00AE820E /* UIView+IFQInspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IFQInspectable.m"; sourceTree = "<group>"; };
 		3FC769DE1D816B2900AE820E /* UIImageView+IFQWebURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+IFQWebURL.h"; sourceTree = "<group>"; };
 		3FC769DF1D816B2900AE820E /* UIImageView+IFQWebURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+IFQWebURL.m"; sourceTree = "<group>"; };
-		3FC769E51D81747900AE820E /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		3FC769EF1D81764F00AE820E /* IFQMediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQMediaPlayerViewController.h; sourceTree = "<group>"; };
 		3FC769F01D81764F00AE820E /* IFQMediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQMediaPlayerViewController.m; sourceTree = "<group>"; };
 		3FC769F41D817CBB00AE820E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -149,6 +172,7 @@
 		3FD23FF21D9A7FB8006E6682 /* IFQMethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQMethodSwizzle.h; sourceTree = "<group>"; };
 		41850582882DA3E8DC2C74ED /* Pods-IFQLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFQLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive.debug.xcconfig"; sourceTree = "<group>"; };
 		44718AFBBC53B6E0B56C0B3A /* Pods_IFQLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IFQLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = ijkplayer/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj; sourceTree = "<group>"; };
 		D5242C747050CBA9D3773C1D /* Pods-IFQLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFQLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,11 +181,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C9DEE41DCC51F80017FF24 /* IJKMediaFramework.framework in Frameworks */,
 				3FC769F91D817CE000AE820E /* libiconv.tbd in Frameworks */,
 				3FC769F71D817CD300AE820E /* libbz2.tbd in Frameworks */,
 				3FC769F51D817CBB00AE820E /* libz.tbd in Frameworks */,
 				E493E01CB6096B977B57C786 /* Pods_IFQLive.framework in Frameworks */,
-				3FC769F31D817C3A00AE820E /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +350,7 @@
 		3FC7699F1D81493A00AE820E = {
 			isa = PBXGroup;
 			children = (
+				B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */,
 				3FC769E41D81741900AE820E /* IFQFrameworks */,
 				3FC769AA1D81493A00AE820E /* IFQLive */,
 				3FC769A91D81493A00AE820E /* Products */,
@@ -473,7 +498,6 @@
 		3FC769E41D81741900AE820E /* IFQFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FC769E51D81747900AE820E /* IJKMediaFramework.framework */,
 			);
 			path = IFQFrameworks;
 			sourceTree = "<group>";
@@ -529,6 +553,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B8C9DED81DCC50C70017FF24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8C9DEDD1DCC50C70017FF24 /* IJKMediaFramework.framework */,
+				B8C9DEDF1DCC50C70017FF24 /* IJKMediaFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BBED38F54383299E2002C42A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,10 +584,12 @@
 				3FC769A61D81493A00AE820E /* Resources */,
 				D4C67A52D66B608CC33AE52E /* [CP] Embed Pods Frameworks */,
 				E7894D05DE4EFE1454587091 /* [CP] Copy Pods Resources */,
+				F6F518D7357540F897507798 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B8C9DEE11DCC51000017FF24 /* PBXTargetDependency */,
 			);
 			name = IFQLive;
 			productName = IFQLive;
@@ -588,12 +623,35 @@
 			mainGroup = 3FC7699F1D81493A00AE820E;
 			productRefGroup = 3FC769A91D81493A00AE820E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B8C9DED81DCC50C70017FF24 /* Products */;
+					ProjectRef = B8C9DED71DCC50C70017FF24 /* IJKMediaPlayer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3FC769A71D81493A00AE820E /* IFQLive */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B8C9DEDD1DCC50C70017FF24 /* IJKMediaFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IJKMediaFramework.framework;
+			remoteRef = B8C9DEDC1DCC50C70017FF24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8C9DEDF1DCC50C70017FF24 /* IJKMediaFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = IJKMediaFrameworkTests.xctest;
+			remoteRef = B8C9DEDE1DCC50C70017FF24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3FC769A61D81493A00AE820E /* Resources */ = {
@@ -657,6 +715,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6F518D7357540F897507798 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFQLive/Pods-IFQLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -705,6 +778,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8C9DEE11DCC51000017FF24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IJKMediaFramework;
+			targetProxy = B8C9DEE01DCC51000017FF24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3FC769B41D81493A00AE820E /* Main.storyboard */ = {
