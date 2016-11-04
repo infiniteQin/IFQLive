@@ -12,9 +12,17 @@
 @implementation UIViewController (IFQNavTransationAnimating)
 
 + (void)load {
+    IFQSwizzleMethod(self,@selector(viewDidLoad),@selector(ifq_viewDidLoad));
     IFQSwizzleMethod(self,@selector(viewDidAppear:),@selector(ifqNavTransAni_viewDidAppear:));
     IFQSwizzleMethod(self,@selector(viewDidDisappear:),@selector(ifqNavTransAni_viewDidDisappear:));
 }
+
+- (void)ifq_viewDidLoad {
+    self.navigationController.navigationBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
+    [self ifq_viewDidLoad];
+}
+
 
 - (void)ifqNavTransAni_viewDidAppear:(BOOL)animated {
     self.ifq_navTransationAnimating = NO;

@@ -10,6 +10,7 @@
 #import "IFQConversationListCell.h"
 #import "IFQWebSocketClient.h"
 #import "IFQIMMsgCreator.h"
+#import "UIScrollView+IFQRefresh.h"
 
 static NSString * const kConversationListCell = @"IFQConversationListCell";
 
@@ -23,11 +24,10 @@ static NSString * const kConversationListCell = @"IFQConversationListCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[IFQWebSocketClient sharedInstance] connectWithURL:@"ws://127.0.0.1:8080"];
-    IFQBaseIMMsg *loginMsg = [IFQIMMsgCreator loginMsgWithUsrName:@"bbb" password:@"123456"];
-    [[IFQWebSocketClient sharedInstance] sendMsg:loginMsg];
+    
     {//
         self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.automaticallyAdjustsScrollViewInsets = NO;
         self.title = @"消息中心";
     }
     
@@ -37,13 +37,22 @@ static NSString * const kConversationListCell = @"IFQConversationListCell";
         self.tableView.rowHeight  = 60;
         self.tableView.tableFooterView = [UIView new];
         [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([IFQConversationListCell class]) bundle:nil] forCellReuseIdentifier:kConversationListCell];
+        [self.tableView addPullToRefreshView:^{
+            
+        }];
     }
     
+    
+    {//test
+        [[IFQWebSocketClient sharedInstance] connectWithURL:@"ws://127.0.0.1:8080"];
+        IFQBaseIMMsg *loginMsg = [IFQIMMsgCreator loginMsgWithUsrName:@"bbb" password:@"123456"];
+        [[IFQWebSocketClient sharedInstance] sendMsg:loginMsg];
+    }
 }
 
 #pragma mark UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 15;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

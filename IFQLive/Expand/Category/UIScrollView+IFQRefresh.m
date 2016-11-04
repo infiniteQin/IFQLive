@@ -19,7 +19,7 @@ static char const kRefreshBlockAssKey;
     SDRefreshHeaderView *refreshView = [[SDRefreshHeaderView alloc] init];
     objc_setAssociatedObject(self, &kRefreshHeaderViewAssKey, refreshView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(refreshView, &kRefreshBlockAssKey, freshBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    [refreshView addToScrollView:self isEffectedByNavigationController:NO];
+    [refreshView addToScrollView:self isEffectedByNavigationController:YES];
     [refreshView addTarget:self refreshAction:@selector(actionRefresh)];
 }
 

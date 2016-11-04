@@ -55,9 +55,24 @@
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.player pause];
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    if (![self.player isPlaying]) {
+//        [self.player play];
+//    }
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self.player pause];
+//}
+
+-(void)dealloc {
+    [self removeMovieNotificationObservers];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [_player shutdown];
+    _player = nil;
 }
 
 - (void)appDidBecomeActive {
@@ -119,16 +134,6 @@
         [_loadingMaskView addSubview:visualEffectView];
     }
     return _loadingMaskView;
-}
-
-
-
--(void)dealloc {
-    [self removeMovieNotificationObservers];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    [_player shutdown];
-    _player = nil;
 }
 
 #pragma Install Notifiacation

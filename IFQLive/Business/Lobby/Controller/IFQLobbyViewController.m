@@ -37,10 +37,16 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.translucent = NO;
+//    {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
 //    self.edgesForExtendedLayout               = UIRectEdgeTop;
 //    self.automaticallyAdjustsScrollViewInsets = YES;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     { // tableView
+        
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * Ratio + 1;
@@ -51,6 +57,7 @@ static NSString * const kItemCellIdentify = @"ItemCellIdentify";
         [self.tableView addPullToRefreshView:^{
             [wSelf requestListData];
         }];
+//        self.tableView.contentInset = UIEdgeInsetsZero;
     }
     
     { // init data
