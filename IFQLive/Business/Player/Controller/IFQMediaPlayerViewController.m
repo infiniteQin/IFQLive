@@ -116,7 +116,9 @@
 - (IJKFFMoviePlayerController *)player {
     if (!_player) {
         NSURL *url = [NSURL URLWithString:self.mediaURL];
-        _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:url withOptions:[IJKFFOptions optionsByDefault]];
+        IJKFFOptions *options = [IJKFFOptions optionsByDefault];
+        [options setPlayerOptionIntValue:5 forKey:@"framedrop"];
+        _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:url withOptions:options];
         [_player setScalingMode:IJKMPMovieScalingModeAspectFill];
         [_player setPauseInBackground:YES];
     }
